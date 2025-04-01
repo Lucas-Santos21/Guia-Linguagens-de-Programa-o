@@ -1,0 +1,50 @@
+	CONSIDERAÇÕES IMPORTANTES
+
+#include <iostream> -> Importa as bibliotecas basicas do C++.
+
+using namespace std; -> Permite utilizar os atributos de C++ sem explicitar o
+			std:: -> Exemplo: std:: cout
+
+C++ é uma linguagem case sensitive -> Se utilziar letras maiusculas no lugar de minusculas 
+				      ou o contrário, resultará em erro.
+
+Utilizar << para separar os elementos -> Exemplo: cout << "Hoje e dia: " << variavelDia;
+
+Um ponteiro (ex: int *nome_ponteiro) NÃO PODE ter o mesmo nome de uma variavel. 
+				     -> int i = 10; int *i; -> NAO PODE EXISTIR
+				     -> int i = 10; int *ii = &i -> PODE EXISTIR
+
+Tipos de variavel -> int i -> armazena um valor inteiro.
+		     &i -> representa a posição de i na memória;
+		     int *ponteiro = &i ->  armazena o valor presente na posição &i na memoria.
+
+Um poteiro armazena o primeiro valor do array: -> int array[] = {10, 20}; int *ponteiro = array;
+						  *ponteiro vai ser igual a 10;
+						  cout << ponteiro -> retorna 10
+						  cout << *(ponteiro + 1) -> retorna 20 
+
+tem como utilizar o valor de uma variavel para alocar memoria para um array
+Exemplo:    int tamanho = 10; 
+	    int *array = new int[tamanho] -> o array possui 10 posições
+
+	COMANDOS DA LINGUAMGEM
+
+endl -> pula linha
+
+cout -> imprime coisas na tela. Exemplo: cout << "ola mundo";
+
+cin -> recebe valores a partir de entradas do usuário. 
+       Exemplo: cout << "Digite o dia: ";
+		cin >> variavel;
+
+Declaração de arrays: int array[] = {} ou int array;
+
+int *array = new int[5] -> O array possui 5 posições
+			   	
+
+#define -> #define é utilizado para definir um macro no sistema, tudo
+	   que for definido com isso valera para o programa inteiro
+	   Exemplo: #define LIN = 10; -> Define que em todas as ocorrências
+					 de LIN sera LIN = 10.
+					 int *array = new int[LIN] -> (o array tera 10 posições)
+
