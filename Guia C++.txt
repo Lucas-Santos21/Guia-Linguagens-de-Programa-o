@@ -2,6 +2,14 @@
 
 #include <iostream> -> Importa as bibliotecas basicas do C++.
 
+#include <string> -> Importa a biblioteca string e permite utilizar variaveis string.
+
+#include <algorithm> -> Importa a biblioteca algorithm que possue funções com reverse(), q inverte uma string.
+
+#include <fstream> -> Importa a biblioteca que permite abrir um arquivo.
+
+#include <sstream> -> Importa a biblioteca que permite utilizar o stringstream.
+
 using namespace std; -> Permite utilizar os atributos de C++ sem explicitar o
 			std:: -> Exemplo: std:: cout
 
@@ -23,9 +31,16 @@ Um poteiro armazena o primeiro valor do array: -> int array[] = {10, 20}; int *p
 						  cout << ponteiro -> retorna 10
 						  cout << *(ponteiro + 1) -> retorna 20 
 
-tem como utilizar o valor de uma variavel para alocar memoria para um array
+É possivel utilizar o valor de uma variavel para alocar memoria para um array
 Exemplo:    int tamanho = 10; 
 	    int *array = new int[tamanho] -> o array possui 10 posições
+
+
+size_t -> tipo de variavel não negativa que por padrão representa tamanhos e indices
+	  Ele é o tipo padrão retornado por funções como string.length() ou string.find().
+
+string::npos -> É um valor especial utilizado para demonstrar que nada foi encontrado.
+		Quando você faz nome.find("x") e não encontra "x", o retorno é string::npos.
 
 	COMANDOS DA LINGUAMGEM
 
@@ -47,4 +62,36 @@ int *array = new int[5] -> O array possui 5 posições
 	   Exemplo: #define LIN = 10; -> Define que em todas as ocorrências
 					 de LIN sera LIN = 10.
 					 int *array = new int[LIN] -> (o array tera 10 posições)
+
+Sleep(numero) -> faz o tempo da execução parar pelo tempo indicado
+
+
+	FUNÇÕES DO C++
+
+.length() -> retorna o tamanho da string (.size faz a mesma coisa)
+
+.erase() -> remove um caractere. 
+	    Exemplo: string palavra = "teste";
+		     palavra.erase(1, 1); -> Remove 1 caractere na posição 1 ('e')
+
+reverse(variavel.begin(), variavel.end) -> inverte uma string
+
+ifstream arquivo("arquivo.txt"); - abre um arquivo txt ja existente para lê-lo no programa.
+
+.find_last_of(condição) -> encontra a ultima ocorrencia da condição na string.
+
+.substr(começo, fim) -> captura um trecho da string do inicio marcado ate um segundo ponto.
+			Ex: string nome = "Lucas Santos";
+			    string primeiroNome = nome.substr(0, nome.find(' '));
+			    Vai retornar o Nome até o primeiro espaço.
+
+stringstream nome_qualquer(string) -> permite ler uma string com espaços palavra por palavra.
+				      Ex: string nome = "Lucas Santos";
+					  stringstream pegar(nome);
+					  string palavra;
+					  pegar >> palavra(funciona igual o cin>>)
+					  palavra agora é igual a "Lucas", com loop da pra pegar 
+					  outras palavras.
+
+
 
