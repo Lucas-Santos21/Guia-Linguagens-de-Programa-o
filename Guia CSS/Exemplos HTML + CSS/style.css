@@ -1,0 +1,26 @@
+body{
+
+    background-color: white;
+
+}
+
+h1{
+
+    color: aqua;
+
+}
+
+p{
+
+    color: rgb(41, 41, 244);
+
+}
+
+.exemplo-back{
+
+    height: 300px;
+    background: gray url("img/Imagem-fundo.jpg") center no-repeat;
+    background-size: cover;
+    
+    
+}
